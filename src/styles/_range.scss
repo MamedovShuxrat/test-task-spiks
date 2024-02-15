@@ -1,0 +1,328 @@
+.range {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    column-gap: 27px;
+}
+
+.range__item {
+    max-width: 225px;
+    width: 100%;
+}
+
+.range__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 135%;
+    color: $primary-color;
+    margin-bottom: 24px;
+}
+
+.range__item-nose {
+    max-width: 108px;
+}
+
+.range__title-mb {
+    margin-bottom: 10px;
+}
+
+.range__line {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+
+    .range__tooltip {
+        position: absolute;
+        text-wrap: nowrap;
+        padding: 2px 5px;
+
+        width: 51px;
+        height: 35px;
+        top: -45px;
+        right: 48px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 135%;
+
+        background: url('./images/icons/tooltip.svg') center/cover no-repeat;
+    }
+
+
+    .dark-line {
+        width: 30%;
+        height: 4px;
+        border-radius: 3px;
+        background-color: #30303D;
+    }
+
+
+    .green-line {
+        position: relative;
+        width: 70%;
+        height: 4px;
+        border-radius: 3px;
+        box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.31);
+        background-color: $accent-light-green;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 16px;
+            top: -6px;
+            height: 16px;
+            border-radius: 8px;
+            box-shadow: inset 3px 5px 12px 0px rgba(255, 255, 255, 0.2), 0px 10px 27px 0px rgba(30, 29, 46, 0.3);
+            background: linear-gradient(149.70deg, rgb(133, 214, 45) 14.424%, rgb(107, 171, 43) 89.985%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: -2px;
+            cursor: pointer;
+        }
+    }
+}
+
+.range__summ {
+    display: flex;
+}
+
+.range__current_sum {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 135%;
+
+    border: 1px solid #606060;
+    border-radius: 3px;
+}
+
+.range__total_sum {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 135%;
+    margin-left: auto;
+
+    border: 1px solid #606060;
+    border-radius: 3px;
+    color: $gray;
+}
+
+
+.range__column-graph {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 106px;
+}
+
+.column {
+    width: 4px;
+    height: 26px;
+    background-color: $accent-light-green;
+    display: inline-block;
+}
+
+.column-not-full {
+    height: 22px;
+}
+
+.column-yellow {
+    background-color: #dfcf60;
+}
+
+.column-green {
+    background-color: #277217;
+}
+
+.range__min-max {
+    display: flex;
+    justify-content: space-between;
+}
+
+.min-max {
+    color: $gray;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 135%;
+}
+
+
+
+.range__sort {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #353542;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.sort__tooltip {
+    position: absolute;
+    top: 50px;
+    left: -60%;
+    transform: translateX(-50%);
+    background-color: #353542;
+    text-wrap: nowrap;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s, opacity 0.5s ease-in-out;
+}
+
+.range__sort:hover .sort__tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.sort__btn {
+    width: 24px;
+    height: 24px;
+    outline: none;
+    background: url('./images/icons/filter.svg') center/cover no-repeat;
+}
+
+.sort__wrapper {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+
+    list-style: none;
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 10px 25px 0px rgba(15, 15, 23, 0.63);
+    background: rgb(33, 33, 41);
+}
+
+.sort__title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 135%;
+    color: $primary-color;
+    margin-bottom: 11px;
+}
+
+.sort__item {
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 135%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sort-icon {
+    display: inline-block;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.sort-date {
+    background: url('./images/icons/date.svg') center/cover no-repeat;
+}
+
+.sort-hight {
+    background: url('./images/icons/arrow.svg') center/cover no-repeat;
+}
+
+.sort-low {
+    background: url('./images/icons/arrow.svg') center/cover no-repeat;
+    transform: rotate(180deg);
+}
+
+.sort-thc-high {
+    position: relative;
+    width: 22px;
+    height: 9px;
+    background: url('./images/icons/THC.svg') center/cover no-repeat;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url('./images/icons/up.svg');
+        background-position: center center;
+
+        top: 4px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.sort-thc-low {
+    position: relative;
+    width: 22px;
+    height: 9px;
+    background: url('./images/icons/THC.svg') center/cover no-repeat;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url('./images/icons/down.svg');
+        background-position: center center;
+
+        top: 4px;
+        left: 13px;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.sort-cbd-high {
+    position: relative;
+    width: 22px;
+    height: 7px;
+    background: url('./images/icons/cbd.svg') center/cover no-repeat;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url('./images/icons/up.svg');
+        background-position: center center;
+
+        top: 4px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.sort-cbd-low {
+    position: relative;
+    width: 22px;
+    height: 7px;
+    background: url('./images/icons/cbd.svg') center/cover no-repeat;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url('./images/icons/down.svg');
+        background-position: center center;
+
+        top: 3px;
+        left: 13px;
+        width: 18px;
+        height: 18px;
+
+    }
+}

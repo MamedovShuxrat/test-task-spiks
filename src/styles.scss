@@ -1,0 +1,41 @@
+@import "styles/varibales.scss";
+@import "styles/header.scss";
+@import "styles/range.scss";
+@import "styles/result.scss";
+@import "styles/sidebar.scss";
+@import "styles/footer.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-fonts;
+    background-color: $second-color;
+    color: $primary-color;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+}
+
+button {
+    background-color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1489px;
+    margin: 0 auto;
+    padding: 20px 35px;
+    border: 1px solid #fff;
+}
