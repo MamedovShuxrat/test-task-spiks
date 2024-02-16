@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test task</title>
+    <title>Skips</title>
 </head>
 
 <body>
@@ -77,40 +77,58 @@
                     </div>
                 </div>
                 <div class="range__sort">
-                    <div class="sort__tooltip">Открыть окно фильтрации</div>
-                    <button class="sort__btn"></button>
-                    <ul class="sort__wrapper">
+                    <button class="sort__btn">
+                        <div class="sort__tooltip">Открыть окно фильтрации</div>
+                    </button>
+                    <ul class="sort__wrapper toggle">
                         <p class="sort__title">Sort by :</p>
                         <li class="sort__item">
                             <span class="sort-icon sort-date"></span>
-                            Date (New first)
+                            <a href="#" class="sort__text">
+                                Date (New first)
+                            </a>
                         </li>
                         <li class="sort__item">
-                            <span class="sort-icon sort-date"></span>Date (Old first)
+                            <span class="sort-icon sort-date"></span>
+                            <a href="#" class="sort__text">
+                                Date (Old first)
+                            </a>
                         </li>
                         <li class="sort__item">
                             <span class="sort-icon sort-hight"></span>
-                            Price (High first)
+                            <a href="#" class="sort__text">
+                                Price (High first)
+                            </a>
                         </li>
                         <li class="sort__item">
                             <span class="sort-icon sort-low "></span>
-                            Price (Low first)
+                            <a href="#" class="sort__text">
+                                Price (Low first)
+                            </a>
                         </li>
                         <li class="sort__item">
                             <span class="sort-icon sort-thc-high"></span>
-                            Total THC (High first)
+                            <a href="#" class="sort__text">
+                                Total THC (High first)
+                            </a>
                         </li>
                         <li class="sort__item">
                             <span class="sort-icon sort-thc-low"></span>
-                            Total THC (Low first)
+                            <a href="#" class="sort__text">
+                                Total THC (Low first)
+                            </a>
                         </li>
                         <li class="sort__item">
                             <span class="sort-icon sort-cbd-high"></span>
-                            Total CBD (High first)
+                            <a href="#" class="sort__text">
+                                Total CBD (High first)
+                            </a>
                         </li>
                         <li class="sort__item">
                             <span class="sort-icon sort-cbd-low"></span>
-                            Total CBD (Low first)
+                            <a href="#" class="sort__text">
+                                Total CBD (Low first)
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -152,145 +170,153 @@
                 <div class="sidebar__lists">
                     <div class="sidebar__title">
                         Classification
-                        <span class="sidebar-arrow"></span>
+                        <span class="sidebar-arrow" data-target="item-1"></span>
                     </div>
-                    <div class="sidebar__item active">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                    <div id="item-1">
+                        <div class="sidebar__item active">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">100% Indica</p>
                         </div>
-                        <p class="sidebar__text">100% Indica</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">100% Sativa</p>
                         </div>
-                        <p class="sidebar__text">100% Sativa</p>
-                    </div>
-                    <div class="sidebar__item active">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item active">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">>50% Indica</p>
                         </div>
-                        <p class="sidebar__text">>50% Indica</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">>50% Sativa</p>
                         </div>
-                        <p class="sidebar__text">>50% Sativa</p>
+
                     </div>
                 </div>
                 <div class="sidebar__lists">
                     <div class="sidebar__title">
                         Production Method
-                        <span class="sidebar-arrow"></span>
+                        <span class="sidebar-arrow " data-target="item-2"></span>
                     </div>
-                    <div class="sidebar__item active">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                    <div id="item-2">
+                        <div class="sidebar__item active">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Indoor</p>
                         </div>
-                        <p class="sidebar__text">Indoor</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">100% Sativa</p>
                         </div>
-                        <p class="sidebar__text">100% Sativa</p>
-                    </div>
-                    <div class="sidebar__item">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Outdoor</p>
                         </div>
-                        <p class="sidebar__text">Outdoor</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Greenhouse</p>
                         </div>
-                        <p class="sidebar__text">Greenhouse</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Light Deprivation</p>
                         </div>
-                        <p class="sidebar__text">Light Deprivation</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Mixed Light</p>
                         </div>
-                        <p class="sidebar__text">Mixed Light</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Other</p>
                         </div>
-                        <p class="sidebar__text">Other</p>
                     </div>
                 </div>
                 <div class="sidebar__lists">
                     <div class="sidebar__title">
                         Size
-                        <span class="sidebar-arrow"></span>
+                        <span class="sidebar-arrow" data-target="item-3"></span>
                     </div>
-                    <div class="sidebar__item active">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                    <div id="item-3">
+                        <div class="sidebar__item active">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Flower</p>
                         </div>
-                        <p class="sidebar__text">Flower</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Pre-Roll Flower</p>
                         </div>
-                        <p class="sidebar__text">Pre-Roll Flower</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Pre-Roll Infused</p>
                         </div>
-                        <p class="sidebar__text">Pre-Roll Infused</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Pre-Roll Leaf</p>
                         </div>
-                        <p class="sidebar__text">Pre-Roll Leaf</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Shake</p>
                         </div>
-                        <p class="sidebar__text">Shake</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Smalls</p>
                         </div>
-                        <p class="sidebar__text">Smalls</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Trim</p>
                         </div>
-                        <p class="sidebar__text">Trim</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Shakes</p>
                         </div>
-                        <p class="sidebar__text">Shakes</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Keef</p>
                         </div>
-                        <p class="sidebar__text">Keef</p>
-                    </div>
-                    <div class="sidebar__item ">
-                        <div class="sidebar__check-wrapper">
-                            <span class="sidebar-check "></span>
+                        <div class="sidebar__item ">
+                            <div class="sidebar__check-wrapper">
+                                <span class="sidebar-check "></span>
+                            </div>
+                            <p class="sidebar__text">Fresh Frozen</p>
                         </div>
-                        <p class="sidebar__text">Fresh Frozen</p>
+
                     </div>
                 </div>
             </aside>

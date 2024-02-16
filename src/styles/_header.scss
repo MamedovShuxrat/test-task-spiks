@@ -1,5 +1,9 @@
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -12,6 +16,10 @@
     text-decoration: none;
 
     margin-right: 16px;
+
+    -webkit-transition: text-shadow 1s ease-in-out;
+
+    -o-transition: text-shadow 1s ease-in-out;
 
     transition: text-shadow 1s ease-in-out;
 
@@ -47,8 +55,14 @@
 }
 
 .header__products {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
     column-gap: 10px;
 }
 
@@ -66,7 +80,15 @@
     line-height: 135%;
     text-wrap: nowrap;
 
+    -webkit-transition: -webkit-box-shadow ease-in-out .8s;
+
+    transition: -webkit-box-shadow ease-in-out .8s;
+
+    -o-transition: box-shadow ease-in-out .8s;
+
     transition: box-shadow ease-in-out .8s;
+
+    transition: box-shadow ease-in-out .8s, -webkit-box-shadow ease-in-out .8s;
 
     &::before {
         position: absolute;
@@ -80,12 +102,73 @@
     }
 
     &:hover {
+        -webkit-box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.2);
         box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.2);
     }
 
 
     &.active {
+        -webkit-box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.2);
         box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.2);
         background: rgb(33, 33, 41);
+    }
+}
+
+@media (max-width: 1170px) {
+    .header {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .header__search-label {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .header__search {
+        width: 100%;
+    }
+
+    .header__products {
+        width: 100%;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__logo {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .header__search-label {
+        width: 100%;
+    }
+
+    .header__products {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .header__products_item {
+        width: calc(50% - 35px);
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header__products_item {
+        width: calc(100% - 28px);
+    }
+
+    .header__products {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }

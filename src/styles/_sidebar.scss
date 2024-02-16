@@ -8,7 +8,6 @@
     max-width: 243px;
     margin-top: 30px;
 
-
 }
 
 .sidebar__lists {
@@ -16,7 +15,11 @@
 }
 
 .sidebar__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 18px;
     font-weight: 600;
@@ -33,6 +36,16 @@
     cursor: pointer;
     margin-left: auto;
 
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+
+    transition: -webkit-transform 0.4s ease-in-out;
+
+    -o-transition: transform 0.4s ease-in-out;
+
+    transition: transform 0.4s ease-in-out;
+
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+
 }
 
 .sidebar__check-wrapper {
@@ -44,11 +57,21 @@
 
 }
 
+.sidebar-is-show {
+    display: none;
+}
+
 .sidebar__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
+
     &.active {
+
         .sidebar__text {
             color: $primary-color;
         }
@@ -78,22 +101,14 @@
     cursor: pointer;
 }
 
-// .sidebar-check {
-//     &.active {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 15px;
-//         height: 15px;
-//         background-image: url('./images/icons/checkbox.svg');
-//         background-repeat: no-repeat;
-//     }
-// }
-
 .sidebar__text {
     font-size: 16px;
     font-weight: 400;
     line-height: 147%;
     color: $gray;
     margin-left: 5px;
+    -webkit-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+
 }

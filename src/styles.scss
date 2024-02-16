@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -38,4 +39,18 @@ button {
     margin: 0 auto;
     padding: 20px 35px;
     border: 1px solid #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 17px;
+
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 8px 14px;
+
+    }
 }
