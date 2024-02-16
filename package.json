@@ -4,8 +4,8 @@
   "description": "the test task of the skips company",
   "main": "index.js",
   "scripts": {
-    "build": "webpack  ",
-    "start": "webpack serve  ",
+    "build": "webpack",
+    "start": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
