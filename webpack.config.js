@@ -55,7 +55,7 @@ module.exports = {
             new CssMinimizerPlugin(),
         ],
     },
-    mode: 'production',
+    mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'

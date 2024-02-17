@@ -6,6 +6,7 @@
     -ms-flex-align: center;
     align-items: center;
     margin-top: 30px;
+    padding-left: 15px;
     -webkit-column-gap: 27px;
     -moz-column-gap: 27px;
     column-gap: 27px;
@@ -14,6 +15,7 @@
 .range__item {
     max-width: 225px;
     width: 100%;
+
 }
 
 .range__title {
@@ -39,6 +41,7 @@
     display: flex;
     margin-bottom: 15px;
 
+
     .range__tooltip {
         position: absolute;
         text-wrap: nowrap;
@@ -58,7 +61,7 @@
 
 
     .dark-line {
-        width: 30%;
+        width: 67.5px;
         height: 4px;
         border-radius: 3px;
         background-color: #30303D;
@@ -67,7 +70,7 @@
 
     .green-line {
         position: relative;
-        width: 70%;
+        width: 157.5px;
         height: 4px;
         border-radius: 3px;
         -webkit-box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.31);
@@ -89,7 +92,7 @@
         }
 
         &::before {
-            left: 0;
+            left: -15px;
         }
 
         &::after {
