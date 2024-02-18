@@ -2,6 +2,7 @@ const rangeLines = document.querySelectorAll('.range__line')
 
 rangeLines.forEach(rangeLine => {
     rangeLine.addEventListener('mousedown', onMouseDown)
+
 })
 
 function onMouseDown(event) {
@@ -26,6 +27,8 @@ function onMouseDown(event) {
 
         const totalSum = parentElement.querySelector('.range__total_sum')
         const totalCurSum = parentElement.querySelector('.range__current_sum')
+        const totalMaxSum = document.getElementById('digitSumm')
+        const totalMaxSumDigits = typeof totalMaxSum.textContent === 'string' ? parseInt(totalMaxSum.textContent.match(/\d+/g)[0]) : 0
 
         const totalSumValue = totalSum.innerText
         const getPercentOrDollar = (str) => {
@@ -42,7 +45,7 @@ function onMouseDown(event) {
             totalSum.innerText = innerText
         }
         if (totalCurSum) {
-            const totalCurSumResult = Math.round((offsetX / rangeLineWidth) * 9999)
+            const totalCurSumResult = Math.round((offsetX / rangeLineWidth) * totalMaxSumDigits)
             totalCurSum.innerText = `${totalCurSumResult}$`
             tooltip.innerText = `${totalCurSumResult}$`
         }
